@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* #root {
+  height: 100vh;
+} */
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Collapsible sidebar */
+.w-decreasing span,
+.w-decreasing .hide-div {
+  display: none;
+}
+.w-decreasing .search {
+  border: none;
+  box-shadow: none;
+}
+.w-decreasing .search h3,
+.w-decreasing img,
+.w-decreasing .icons,
+.w-decreasing h3 {
+  text-align: center;
+  margin: 0 auto;
+}
+.w-decreasing {
+  animation: w-decreasing-animation 500ms forwards;
+}
+.w-increasing {
+  animation: w-increasing-animation 500ms forwards;
+}
+
+@keyframes w-increasing-animation {
+  100% {
+    max-width: 300px;
+  }
+  0% {
+    width: 5vw;
+  }
+}
+@keyframes w-decreasing-animation {
+  0% {
+    max-width: 300px;
+  }
+  100% {
+    width: 5vw;
+  }
+}

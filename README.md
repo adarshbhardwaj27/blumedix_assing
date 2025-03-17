@@ -5,3 +5,5 @@
 
 2. For both frontend and backend, please do
    npm install
+
+3. Also the databse is empty so please add some prods and users to see results

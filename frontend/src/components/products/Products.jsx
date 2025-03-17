@@ -29,7 +29,7 @@ const Products = () => {
       );
 
       if (response.ok) {
-        setProducts(products.filter((product) => product._id !== productId)); // Update UI
+        setProducts(products.filter((product) => product._id !== productId));
       } else {
         console.error("Failed to delete product.");
       }
@@ -40,22 +40,23 @@ const Products = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 py-10">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto px-4">
         <h1 className="text-5xl font-extrabold text-gray-800 text-center mb-10">
           Products
         </h1>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {products.map((product) => (
             <div
               key={product._id}
-              className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center text-center transform transition-all hover:scale-105 hover:shadow-2xl h-full"
+              className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center text-center transform transition-all hover:scale-105 hover:shadow-2xl h-full 
+              w-full sm:w-80 md:w-96 lg:w-[300px]" // Increased width
             >
               {/* Product Image */}
               <img
                 src={product.image}
                 alt={product.title}
-                className="w-32 h-32 object-contain mb-4"
+                className="w-40 h-40 object-contain mb-4"
               />
 
               {/* Product Info */}
@@ -70,19 +71,19 @@ const Products = () => {
                 {/* Buttons */}
                 <div className="mt-6 flex gap-2">
                   <button
-                    className="w-full px-4 py-2 bg-blue-600 text-white font-semibold rounded-md shadow-md hover:bg-blue-700 transition-all"
+                    className="w-full px-5 py-2 bg-blue-600 text-white font-semibold rounded-md shadow-md hover:bg-blue-700 transition-all"
                     onClick={() => navigate(`/product/${product._id}`)}
                   >
                     View Details
                   </button>
                   <button
-                    className="w-full px-4 py-2 bg-green-600 text-white font-semibold rounded-md shadow-md hover:bg-green-700 transition-all"
+                    className="w-full px-5 py-2 bg-green-600 text-white font-semibold rounded-md shadow-md hover:bg-green-700 transition-all"
                     onClick={() => navigate(`/edit-product/${product._id}`)}
                   >
                     Edit
                   </button>
                   <button
-                    className="w-full px-4 py-2 bg-red-600 text-white font-semibold rounded-md shadow-md hover:bg-red-700 transition-all"
+                    className="w-full px-5 py-2 bg-red-600 text-white font-semibold rounded-md shadow-md hover:bg-red-700 transition-all"
                     onClick={() => handleDelete(product._id)}
                   >
                     Delete

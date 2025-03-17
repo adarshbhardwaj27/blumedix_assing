@@ -59,7 +59,7 @@ const User = () => {
           <div className="flex justify-between items-center p-4 bg-gray-50 rounded-lg">
             <span className="font-semibold">City:</span>
             <span className="text-gray-700">
-              {user.city ? capitalize(user.address.city) : "N/A"}
+              {user.city ? capitalize(user.city) : "N/A"}
             </span>
           </div>
 

@@ -13,10 +13,10 @@ import { useLocation } from "react-router-dom";
 import CreateDialog from "./components/Users/CreateDialog";
 import { useState } from "react";
 import User from "./components/Users/User";
-import Products from "./products/Products";
-import Product from "./products/Product";
-import CreateProductDialog from "./products/CreateProductDialog";
-import EditProduct from "./products/EditProduct";
+import Products from "./components/products/Products";
+import Product from "./components/products/Product";
+import CreateProductDialog from "./components/products/CreateProductDialog";
+import EditProduct from "./components/products/EditProduct";
 import EditUser from "./components/Users/EditUser";
 
 function App() {
@@ -70,7 +70,7 @@ const Layout = () => {
               className="bg-green-600 text-white p-2 mx-2 rounded-lg ml-2"
               onClick={createProdHandler}
             >
-              Add User
+              Add Product
             </button>
           )}
           <Link to="/login">
